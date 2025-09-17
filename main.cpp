@@ -1,7 +1,11 @@
 #include "Header.h"
 
+Deck playdeck;
+Player player;
+
 int main()
 {
+#ifdef BOO
 	const int screen_width = 1280;
 	const int screen_height = 800;
 
@@ -32,6 +36,15 @@ int main()
 	}
 
 	CloseWindow();
+#endif
+
+	playdeck.shuffle();
+
+	Card card1 = playdeck.dealCard();
+	Card card2 = playdeck.dealCard();
+
+	player.getCard(card1, card2);
+	player.printHand();
 
     return 0;
 }
