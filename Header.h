@@ -83,7 +83,7 @@ public:
 class Player
 {
 private: //Each player has an array of cards in their hand and their money count
-    std::vector<Card> m_hand(2ULL);
+    std::vector<Card> m_hand;
 	int m_money;
 
 public:
@@ -92,4 +92,5 @@ public:
 	void getCard(Card card1, Card card2);
 
 	void printHand();
+
 };
