@@ -4,6 +4,7 @@
 Player::Player()
 	{
 		m_money = 5000; //Change default money amount here
+		m_hand.resize(2);
 	}
 
 void Player::getCard(Card card1, Card card2) //Function to
@@ -16,3 +17,4 @@ void Player::printHand()
 	{
 		std::cout << "You have " << m_hand[0] << " and " << m_hand[1] << " in your hand!";
 	}
+
